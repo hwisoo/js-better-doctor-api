@@ -16,6 +16,9 @@ $(document).ready(function () {
     promise.then(function (response) {
       let body = JSON.parse(response);
       console.table(body);
+      if (body.data.length == 0) {
+        $("#results").append("No results found.");
+      }
       for (let i = 0; i < body.data.length; i++) {
 
         $("#results").append(`<li id='${body.data[i].profile.first_name} ${body.data[i].profile.last_name}'>${body.data[i].profile.first_name} ${body.data[i].profile.last_name} ${body.data[i].profile.title}</li>`);
@@ -30,11 +33,12 @@ $(document).ready(function () {
           let body = JSON.parse(response);
 
           $("#details").append(`<img class='img-thumbnail' src=${body.data[0].profile.image_url} alt='profile'>`);
-          $("#details").append(`<p>Name: ${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</li>`);
-          $("#details").append(`<p>Bio: ${body.data[0].profile.bio} </li>`);
+          $("#details").append(`<p>Name: ${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</p>`);
+          if (body.data[0].ratings.length > 0) {
+            $("#details").append(`<p>Ratings: ${body.data[0].ratings[0].rating}</p>`);
+          }
+          $("#details").append(`<p>Bio: ${body.data[0].profile.bio} </p>`);
 
-
-          $("#details").fadeIn();
         })
       })
     })
@@ -52,6 +56,9 @@ $(document).ready(function () {
     promise.then(function (response) {
       let body = JSON.parse(response);
       console.table(body);
+      if (body.data.length == 0) {
+        $("#results").append("No results found.");
+      }
       for (let i = 0; i < body.data.length; i++) {
 
         $("#results").append(`<li id='${body.data[i].profile.first_name} ${body.data[i].profile.last_name}'>${body.data[i].profile.first_name} ${body.data[i].profile.last_name} ${body.data[i].profile.title}</li>`);
@@ -66,11 +73,11 @@ $(document).ready(function () {
           let body = JSON.parse(response);
 
           $("#details").append(`<img class='img-thumbnail' src=${body.data[0].profile.image_url} alt='profile'>`);
-          $("#details").append(`<p>Name: ${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</li>`);
-          $("#details").append(`<p>Bio: ${body.data[0].profile.bio} </li>`);
-
-
-          $("#details").fadeIn();
+          $("#details").append(`<p>Name: ${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</p>`);
+          if (body.data[0].ratings.length > 0) {
+            $("#details").append(`<p>Ratings: ${body.data[0].ratings[0].rating}</p>`);
+          }
+          $("#details").append(`<p>Bio: ${body.data[0].profile.bio} </p>`);
         })
       })
     })
