@@ -1,4 +1,3 @@
-import { apiKey } from '../.env';
 const seattle = "47.6062%2C-122.3321";
 const portland = "45.5122%2C-122.6587";
 const houston = "29.7604%2C-95.3698";
@@ -27,7 +26,7 @@ export class Doctor {
       } else if (this.location == "austin") {
         location = austin;
       }
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${this.keyword}&user_location=${location}&sort=distance-asc&skip=0&limit=10&user_key=${apiKey}`
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${this.keyword}&user_location=${location}&sort=distance-asc&skip=0&limit=10&user_key=${process.env.exports.apiKey}`
 
       request.onload = function () {
         if (this.status === 200) {
@@ -56,7 +55,7 @@ export class Doctor {
       } else if (this.location == "austin") {
         location2 = austin;
       }
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.keyword}&user_location=${location2}&sort=distance-asc&skip=0&limit=10&user_key=${apiKey}`
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.keyword}&user_location=${location2}&sort=distance-asc&skip=0&limit=10&user_key=${process.env.exports.apiKey}`
 
       request.onload = function () {
         if (this.status === 200) {
@@ -74,7 +73,7 @@ export class Doctor {
   getDetails(id) {
     return new Promise((resolve, reject) => {
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${id}&skip=0&limit=1&user_key=${apiKey}`
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${id}&skip=0&limit=1&user_key=${process.env.exports.apiKey}`
 
       request.onload = function () {
         if (this.status === 200) {
