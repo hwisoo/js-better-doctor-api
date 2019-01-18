@@ -13,7 +13,7 @@ A simple web app, that takes the location user input and keyword or name and out
     - Example Input : Seattle, "Cardiologist"
     - Example Output : ["John Doe MD, Jane Doe MD, ..."]
   * When user clicks on the doctor name, the program makes another API call and returns the relevant details for the selected doctor.
-    - Example Output : "Name: John Doe, Phone: 1112223333, Address: 123 2nd St. Seattle WA, Bio: Dr. John Doe, MD is one of the top ranked doctors in the United States. He specializes in cardiovascular diesase and ...."
+    - Example Output : "Name: John Doe, Phone: 1112223333, Address: 123 2nd St. Seattle WA, Accepts new patients: true, Bio: Dr. John Doe, MD is one of the top ranked doctors in the United States. He specializes in cardiovascular diesase and ...."
 
 
 ## Setup/Installation Requirements
