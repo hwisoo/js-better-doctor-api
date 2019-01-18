@@ -2,6 +2,7 @@
   width: 50%;
   margin:auto;
   margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 .form-control, label {
@@ -42,4 +43,9 @@ button {
 
 #logo{
   margin-left: 40px;
+}
+
+#better {
+  width: 50%;
+  margin-bottom: 60px;
 }

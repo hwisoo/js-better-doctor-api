@@ -9,30 +9,36 @@
 </head>
 
 <body>
-  <h1 class="text-center bg-success text-white">Find a Doctor - BetterDoctor API<img id="logo"></h1>
-  <div class="container form-group">
-    <div class="row">
-      <div class="col col-md-2">
-        <label class="font-weight-bold" for="location">Location: </label>
-        <select class="form-control" id="location" required>
-          <option value="seattle">Seattle</option>
-          <option value="portland">Portland</option>
-          <option value="houston">Houston</option>
-          <option value="sanantonio">San Antonio</option>
-          <option value="austin">Austin</option>
-        </select>
+  <h1 class="text-center bg-success text-white">Find a Doctor<img id="logo"></h1>
+  <div class="container">
+    <form class="form-group">
+      <div class="row">
+        <div class="col col-md-2">
+          <label class="font-weight-bold" for="location">Location: </label>
+          <select class="form-control" id="location" required>
+            <option value="seattle">Seattle</option>
+            <option value="portland">Portland</option>
+            <option value="houston">Houston</option>
+            <option value="sanantonio">San Antonio</option>
+            <option value="austin">Austin</option>
+          </select>
+        </div>
+        <div class="col col-md-3">
+          <label class="font-weight-bold" for="condition">Keyword: </label>
+          <input id="condition" type="text" class="form-control">
+          <button id="conditionButton" class="btn btn-success">Search by Keyword</button>
+        </div><br>
+        <div class="col col-md-3">
+          <label class="font-weight-bold" for="doctor">Doctor Name: </label>
+          <input id="doctor" type="text" class="form-control">
+          <button id="doctorButton" class="btn btn-success">Search by Name</button>
+        </div>
+        <div class="col col-md-2">
+          <span id="better"><i>Powered by: </i><a target="_blank" href="https://developer.betterdoctor.com/">BetterDoctor
+              API</a></span>
+        </div>
       </div>
-      <div class="col col-md-3">
-        <label class="font-weight-bold" for="condition">Keyword: </label>
-        <input id="condition" type="text" class="form-control">
-        <button id="conditionButton" class="btn btn-success">Search by Keyword</button>
-      </div><br>
-      <div class="col col-md-3">
-        <label class="font-weight-bold" for="doctor">Doctor Name: </label>
-        <input id="doctor" type="text" class="form-control">
-        <button id="doctorButton" class="btn btn-success">Search by Name</button>
-      </div>
-    </div>
+    </form>
   </div>
   <div class="container">
     <div class="row">
