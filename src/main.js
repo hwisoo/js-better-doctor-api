@@ -38,13 +38,14 @@ $(document).ready(function () {
           let body = JSON.parse(response);
           console.table(body);
           $("#details").append(`<img class='img-thumbnail' src=${body.data[0].profile.image_url} alt='profile'>`);
-          $("#details").append(`<p>Name: ${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</p>`);
+          $("#details").append(`<p><span>Name: </span>${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</p>`);
           if (body.data[0].ratings.length > 0) {
-            $("#details").append(`<p>Ratings: ${body.data[0].ratings[0].rating}</p>`);
+            $("#details").append(`<p><span>Ratings: </span>${body.data[0].ratings[0].rating}</p>`);
           }
-          $("#details").append(`<p>Address: ${body.data[0].practices[0].visit_address.street}. ${body.data[0].practices[0].visit_address.city}, ${body.data[0].practices[0].visit_address.state} ${body.data[0].practices[0].visit_address.zip} </p>`);
           $("#details").append(`<span>Phone: </span><a href="tel:${body.data[0].practices[0].phones[0].number}"> ${body.data[0].practices[0].phones[0].number} </a>`);
-          $("#details").append(`<p>Bio: ${body.data[0].profile.bio} </p>`);
+          $("#details").append(`<p><span>Address: </span>${body.data[0].practices[0].visit_address.street}. ${body.data[0].practices[0].visit_address.city}, ${body.data[0].practices[0].visit_address.state} ${body.data[0].practices[0].visit_address.zip} </p>`);
+          $("#details").append(`<p><span>Accepting new patients: </span>${body.data[0].practices[0].accepts_new_patients} </p>`);
+          $("#details").append(`<p><span>Bio: </span>${body.data[0].profile.bio} </p>`);
 
         })
       })
@@ -81,13 +82,14 @@ $(document).ready(function () {
           let body = JSON.parse(response);
           console.table(body);
           $("#details").append(`<img class='img-thumbnail' src=${body.data[0].profile.image_url} alt='profile'>`);
-          $("#details").append(`<p>Name: ${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</p>`);
+          $("#details").append(`<p><span>Name: </span>${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</p>`);
           if (body.data[0].ratings.length > 0) {
-            $("#details").append(`<p>Ratings: ${body.data[0].ratings[0].rating}</p>`);
+            $("#details").append(`<p><span>Ratings: </span>${body.data[0].ratings[0].rating}</p>`);
           }
-          $("#details").append(`<p>Address: ${body.data[0].practices[0].visit_address.street}. ${body.data[0].practices[0].visit_address.city}, ${body.data[0].practices[0].visit_address.state} ${body.data[0].practices[0].visit_address.zip} </p>`);
-          $("#details").append(`<span>Phone: </span><a href="tel:${body.data[0].practices[0].phones[0].number}">${body.data[0].practices[0].phones[0].number} </a>`);
-          $("#details").append(`<p>Bio: ${body.data[0].profile.bio} </p>`);
+          $("#details").append(`<span>Phone: </span><a href="tel:${body.data[0].practices[0].phones[0].number}"> ${body.data[0].practices[0].phones[0].number} </a>`);
+          $("#details").append(`<p><span>Address: </span>${body.data[0].practices[0].visit_address.street}. ${body.data[0].practices[0].visit_address.city}, ${body.data[0].practices[0].visit_address.state} ${body.data[0].practices[0].visit_address.zip} </p>`);
+          $("#details").append(`<p><span>Accepting new patients: </span>${body.data[0].practices[0].accepts_new_patients} </p>`);
+          $("#details").append(`<p><span>Bio: </span>${body.data[0].profile.bio} </p>`);
         })
       })
     })

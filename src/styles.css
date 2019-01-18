@@ -22,6 +22,11 @@ h2 {
   color: #28a745;
   text-shadow: 1px 1px darkgreen;
 }
+
+span {
+  color: #28a745;
+  font-weight: bold;
+}
 li{
   cursor: pointer;
   text-decoration: underline;
