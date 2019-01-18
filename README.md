@@ -46,11 +46,11 @@ no known bugs
 
 ## Support and contact details
 
-
+hwisoocho@gmail.com
 
 ## Technologies Used
 
-HTML, CSS, Bootstrap, Javascript ,JQuery, Webpack, Karma, Jasmine, Git, BetterDoctor API
+HTML, CSS, Bootstrap, Javascript ,JQuery, Webpack, NPM, Karma, Jasmine, Git, BetterDoctor API
 
 ### License
 

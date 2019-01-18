@@ -1,5 +1,4 @@
 import { apiKey } from '../.env';
-
 const seattle = "47.6062%2C-122.3321";
 const portland = "45.5122%2C-122.6587";
 const houston = "29.7604%2C-95.3698";
