@@ -12,6 +12,7 @@ $(document).ready(function () {
   $("#conditionButton").click(function (event) {
     event.preventDefault();
     $("#results").empty();
+    $("#details").empty();
     $("#results").html("<h2>Search Results</h2>");
     let condition = $("#condition").val();
     let location = $("#location").val();
@@ -56,6 +57,7 @@ $(document).ready(function () {
   $("#doctorButton").click(function (event) {
     event.preventDefault();
     $("#results").empty();
+    $("#details").empty();
     $("#results").html("<h2>Search Results</h2>");
     let doctor = $("#doctor").val();
     let location = $("#location").val();
