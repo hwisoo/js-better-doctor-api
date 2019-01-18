@@ -17,11 +17,11 @@ $(document).ready(function () {
       console.table(body);
       for (let i = 0; i < body.data.length; i++) {
 
-        $("#results").append(`<li id=${body.data[i].profile.slug}>${body.data[i].profile.first_name} ${body.data[i].profile.last_name} ${body.data[i].profile.title}</li>`);
+        $("#results").append(`<li id='${body.data[i].profile.first_name} ${body.data[i].profile.last_name}'>${body.data[i].profile.first_name} ${body.data[i].profile.last_name} ${body.data[i].profile.title}</li>`);
       }
       $("li").click(function (event) {
         $("#details").empty();
-        $("#detail").html("<h2>Doctor Details</h2>");
+        $("#details").html("<h2>Doctor Details</h2>");
         let id = this.getAttribute("id");
 
         let detailsPromise = newSearch.getDetails(id);
