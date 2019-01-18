@@ -9,7 +9,27 @@
 </head>
 
 <body>
-
+  <h1 class="text-center">Find a Doctor</h1>
+  <div class="container form-group">
+    <div class="row">
+      <div class="col col-md5">
+        <label for="condition">Keyword: </label>
+        <input id="condition" type="text" class="form-control">
+        <button id="conditionButton" class="btn btn-primary">Search</button>
+      </div><br>
+      <div class="col col-md5">
+        <label for="doctor">Doctor Name: </label>
+        <input id="doctor" type="text" class="form-control">
+        <button id="doctorButton" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div id="results" class="col"></div>
+      <div id="details" class="col"></div>
+    </div>
+  </div>
 </body>
 
 </html>

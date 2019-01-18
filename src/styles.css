@@ -1,0 +1,11 @@
+.form-group, #results {
+  width: 50%;
+  margin:auto;
+}
+
+
+
+.form-control, label {
+  width: 200px;
+
+}
