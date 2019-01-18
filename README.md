@@ -1,6 +1,6 @@
 # _Find a Doctor_
 
-#### _Find A Doctor App using Javascript, Webpack, and BetterDoctor API Jan 2019_
+#### _Find A Doctor App using Javascript, Webpack, and BetterDoctor API, Jan 2019_
 
 #### By _**James Cho**_
 
@@ -50,7 +50,7 @@ hwisoocho@gmail.com
 
 ## Technologies Used
 
-HTML, CSS, Bootstrap, Javascript ,JQuery, Webpack, NPM, Karma, Jasmine, Git, BetterDoctor API
+HTML, CSS, Bootstrap, Javascript , JQuery, Webpack, NPM, Karma, Jasmine, Git, BetterDoctor API
 
 ### License
 
