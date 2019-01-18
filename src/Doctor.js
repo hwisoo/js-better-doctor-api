@@ -8,7 +8,7 @@ export class Doctor {
   keyWordSearch() {
     return new Promise((resolve, reject) => {
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${this.keyword}&user_location=${this.location}&skip=0&limit=10&user_key=${API_KEY}`
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${this.keyword}&user_location=${this.location}&sort=distance-asc&skip=0&limit=10&user_key=${API_KEY}`
 
       request.onload = function () {
         if (this.status === 200) {
