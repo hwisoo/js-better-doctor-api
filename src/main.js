@@ -2,6 +2,10 @@ import { Doctor } from './Doctor.js';
 import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import logoIcon from './images/logo.jpg';
+$("#logo").attr("src", function () {
+  return logoIcon;
+})
 
 $(document).ready(function () {
   //Search by Keyword
@@ -32,12 +36,14 @@ $(document).ready(function () {
         let detailsPromise = newSearch.getDetails(id);
         detailsPromise.then(function (response) {
           let body = JSON.parse(response);
-
+          console.table(body);
           $("#details").append(`<img class='img-thumbnail' src=${body.data[0].profile.image_url} alt='profile'>`);
           $("#details").append(`<p>Name: ${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</p>`);
           if (body.data[0].ratings.length > 0) {
             $("#details").append(`<p>Ratings: ${body.data[0].ratings[0].rating}</p>`);
           }
+          $("#details").append(`<p>Address: ${body.data[0].practices[0].visit_address.street}. ${body.data[0].practices[0].visit_address.city}, ${body.data[0].practices[0].visit_address.state} ${body.data[0].practices[0].visit_address.zip} </p>`);
+          $("#details").append(`<span>Phone: </span><a href="tel:${body.data[0].practices[0].phones[0].number}"> ${body.data[0].practices[0].phones[0].number} </a>`);
           $("#details").append(`<p>Bio: ${body.data[0].profile.bio} </p>`);
 
         })
@@ -73,12 +79,14 @@ $(document).ready(function () {
         let detailsPromise = newSearch.getDetails(id);
         detailsPromise.then(function (response) {
           let body = JSON.parse(response);
-
+          console.table(body);
           $("#details").append(`<img class='img-thumbnail' src=${body.data[0].profile.image_url} alt='profile'>`);
           $("#details").append(`<p>Name: ${body.data[0].profile.first_name} ${body.data[0].profile.last_name} ${body.data[0].profile.title}</p>`);
           if (body.data[0].ratings.length > 0) {
             $("#details").append(`<p>Ratings: ${body.data[0].ratings[0].rating}</p>`);
           }
+          $("#details").append(`<p>Address: ${body.data[0].practices[0].visit_address.street}. ${body.data[0].practices[0].visit_address.city}, ${body.data[0].practices[0].visit_address.state} ${body.data[0].practices[0].visit_address.zip} </p>`);
+          $("#details").append(`<span>Phone: </span><a href="tel:${body.data[0].practices[0].phones[0].number}">${body.data[0].practices[0].phones[0].number} </a>`);
           $("#details").append(`<p>Bio: ${body.data[0].profile.bio} </p>`);
         })
       })

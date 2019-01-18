@@ -7,14 +7,34 @@
 .form-control, label {
   width: 200px;
 }
+
 #location {
   width: 150px;
 }
+
 h1 {
+  text-shadow: 2px 2px darkgreen;
   padding: 30px;
   margin-bottom: 30px;
 }
 
+h2 {
+  color: #28a745;
+  text-shadow: 1px 1px darkgreen;
+}
+li{
+  cursor: pointer;
+  text-decoration: underline;
+}
+li:hover {
+  color: #28a745;
+  font-weight: bold;
+}
+
 button {
   margin-top: 10px;
+}
+
+#logo{
+  margin-left: 40px;
 }
