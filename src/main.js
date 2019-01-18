@@ -10,7 +10,8 @@ $(document).ready(function () {
     $("#results").empty();
     $("#results").html("<h2>Search Results</h2>");
     let condition = $("#condition").val();
-    let newSearch = new Doctor(condition);
+    let location = $("#location").val();
+    let newSearch = new Doctor(condition, location);
     let promise = newSearch.keyWordSearch();
 
     promise.then(function (response) {
@@ -50,7 +51,8 @@ $(document).ready(function () {
     $("#results").empty();
     $("#results").html("<h2>Search Results</h2>");
     let doctor = $("#doctor").val();
-    let newSearch = new Doctor(doctor);
+    let location = $("#location").val();
+    let newSearch = new Doctor(doctor, location);
     let promise = newSearch.nameSearch();
 
     promise.then(function (response) {

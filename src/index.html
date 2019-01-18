@@ -9,16 +9,26 @@
 </head>
 
 <body>
-  <h1 class="text-center">Find a Doctor</h1>
+  <h1 class="text-center bg-success text-white">Find a Doctor</h1>
   <div class="container form-group">
     <div class="row">
-      <div class="col col-md5">
-        <label for="condition">Keyword: </label>
+      <div class="col col-md-2">
+        <label class="font-weight-bold" for="location">Location: </label>
+        <select class="form-control" id="location" required>
+          <option value="seattle">Seattle</option>
+          <option value="portland">Portland</option>
+          <option value="houston">Houston</option>
+          <option value="sanantonio">San Antonio</option>
+          <option value="austin">Austin</option>
+        </select>
+      </div>
+      <div class="col col-md-3">
+        <label class="font-weight-bold" for="condition">Keyword: </label>
         <input id="condition" type="text" class="form-control">
         <button id="conditionButton" class="btn btn-primary">Search</button>
       </div><br>
-      <div class="col col-md5">
-        <label for="doctor">Doctor Name: </label>
+      <div class="col col-md-3">
+        <label class="font-weight-bold" for="doctor">Doctor Name: </label>
         <input id="doctor" type="text" class="form-control">
         <button id="doctorButton" class="btn btn-primary">Search</button>
       </div>
@@ -26,8 +36,8 @@
   </div>
   <div class="container">
     <div class="row">
-      <div id="results" class="col"></div>
-      <div id="details" class="col"></div>
+      <div id="results" class="col col-md-4"></div>
+      <div id="details" class="col col-md-7"></div>
     </div>
   </div>
 </body>

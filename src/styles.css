@@ -4,9 +4,17 @@
   margin-bottom: 60px;
 }
 
-
-
 .form-control, label {
   width: 200px;
+}
+#location {
+  width: 150px;
+}
+h1 {
+  padding: 30px;
+  margin-bottom: 30px;
+}
 
+button {
+  margin-top: 10px;
 }
