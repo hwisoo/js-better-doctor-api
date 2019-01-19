@@ -18,7 +18,6 @@ $(document).ready(function () {
     let location = $("#location").val();
     let newSearch = new Doctor(condition, location);
     let promise = newSearch.keyWordSearch();
-
     promise.then(function (response) {
       let body = JSON.parse(response);
       if (body.data.length == 0) {
@@ -46,10 +45,15 @@ $(document).ready(function () {
           $("#details").append(`<p><span>Address: </span>${body.data[0].practices[0].visit_address.street}. ${body.data[0].practices[0].visit_address.city}, ${body.data[0].practices[0].visit_address.state} ${body.data[0].practices[0].visit_address.zip} </p>`);
           $("#details").append(`<p><span>Accepting new patients: </span>${body.data[0].practices[0].accepts_new_patients} </p>`);
           $("#details").append(`<p><span>Bio: </span>${body.data[0].profile.bio} </p>`);
-
         });
+        detailsPromise.catch(err => {
+          $("#results").append(`An error has occurred: ${err.message}`);
+        })
       });
     });
+    promise.catch(err => {
+      $("#results").append(`An error has occurred: ${err.message}`);
+    })
   });
 
   //Search by Doctor Name
@@ -91,7 +95,13 @@ $(document).ready(function () {
           $("#details").append(`<p><span>Accepting new patients: </span>${body.data[0].practices[0].accepts_new_patients} </p>`);
           $("#details").append(`<p><span>Bio: </span>${body.data[0].profile.bio} </p>`);
         });
+        detailsPromise.catch(err => {
+          $("#results").append(`An error has occurred: ${err.message}`);
+        })
       });
     });
+    promise.catch(err => {
+      $("#results").append(`An error has occurred: ${err.message}`);
+    })
   });
 });
